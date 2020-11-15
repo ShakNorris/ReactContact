@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencilAlt, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPencilAlt, faPhone, faTrashAlt, faUser } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import './ContactListItem.css'
 
@@ -7,9 +7,9 @@ function ContactListItem({contact,removeContact, handleShowEditForm}) {
   return (
     <div className='d-inline-block card mt-3 mr-3'>
       <div className='card-body'>
-        <p>Name - {contact.name}</p>
-        <p>Phone - {contact.phone}</p>
-        <p>E-Mail - {contact.email}</p>
+        <p><FontAwesomeIcon icon={faUser} /> {contact.name}</p>
+        <p><FontAwesomeIcon icon={faPhone} /> {contact.phone}</p>
+        <p><FontAwesomeIcon icon={faEnvelope} /> {contact.email}</p>
 
         <button
           className='btn btn-danger float-right ml-2 mb-2'
